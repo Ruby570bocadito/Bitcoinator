@@ -1,0 +1,51 @@
+# Bitcoinator - Bitcoin Price Prediction ML Project
+
+# Core
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.18.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+lightgbm>=4.0.0
+
+# Hyperparameter Optimization
+optuna>=3.4.0
+
+# Dashboard
+streamlit>=1.28.0
+
+# Data processing
+pyyaml>=6.0
+python-dotenv>=1.0.0
+
+# Utilities
+joblib>=1.3.0
+statsmodels>=0.14.0
+
+# Experiment Tracking
+mlflow>=2.8.0
+
+# Data Validation
+great-expectations>=0.18.0
+
+# Orchestration
+prefect>=2.14.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Backtesting
+backtrader>=1.9.78.123
+
+# Logging
+colorlog>=6.7.0
+
+# Technical Analysis
+ta-lib>=0.4.0

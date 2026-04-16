@@ -1,0 +1,88 @@
+# Bitcoinator - Bitcoin Price Prediction ML Project Configuration
+
+# Project paths
+paths:
+  raw_data: "archive/btcusd_1-min_data.csv"
+  processed_data: "data/processed/"
+  splits: "data/splits/"
+  models: "models/"
+  experiments: "experiments/"
+  reports: "reports/"
+  logs: "logs/"
+
+# Data processing
+data:
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  target_column: "Close"
+  date_column: "Timestamp"
+
+# Feature engineering
+features:
+  technical_indicators:
+    - RSI
+    - MACD
+    - Bollinger_Bands
+    - EMA_7
+    - EMA_21
+    - EMA_50
+    - EMA_200
+    - ATR
+    - VWAP
+  lag_features: [1, 2, 7, 14, 30]
+  temporal_features: true
+
+# Model training
+training:
+  random_seed: 42
+  test_size: 0.15
+  val_size: 0.15
+  early_stopping_patience: 10
+  n_jobs: -1
+
+# Models
+models:
+  baseline:
+    - Naive
+    - MovingAverage
+    - LinearRegression
+  ml:
+    - RandomForest
+    - XGBoost
+    - LightGBM
+  deep_learning:
+    - LSTM
+    - GRU
+
+# Evaluation metrics
+metrics:
+  primary: "RMSE"
+  secondary: ["MAE", "MAPE", "R2", "DirectionalAccuracy"]
+
+# Dashboard
+dashboard:
+  title: "Bitcoin Price Prediction Dashboard"
+  port: 8501
+
+# Backtesting configuration
+backtest:
+  initial_capital: 10000.0
+  commission: 0.001
+  slippage: 0.0005
+  position_size: 0.1
+
+# Hyperparameter optimization (Optuna)
+optuna:
+  n_trials: 100
+  timeout: 3600
+  study_name: "bitcoinator_optimization"
+  storage: "sqlite:///optuna.db"
+  pruner: "median"
+
+# Experiment tracking (MLflow)
+mlflow:
+  tracking_uri: "mlruns"
+  experiment_name: "bitcoinator"
+  log_artifacts: true
+  log_models: true
