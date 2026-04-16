@@ -1,0 +1,24 @@
+2026-04-08 18:26:26 - bitcoinator_trainer - INFO - MLflow tracking disabled
+2026-04-08 18:26:26 - bitcoinator_trainer - INFO - Training initialized for model: xgboost
+2026-04-08 18:26:26 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:26:26 - bitcoinator_trainer - INFO - BITCOINATOR TRAINING
+2026-04-08 18:26:26 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:26:26 - bitcoinator_trainer - INFO - Loading data...
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO - Loaded 2278 rows of daily data
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO - Creating features...
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO -   - Technical indicators added
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO -   - Temporal features added
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO -   - Lag features (1-60) added
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO -   - Rolling features added
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO - Final dataset: 2189 rows, 118 columns
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO - Preparing data splits...
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO - Train: 1532, Val: 328, Test: 329
+2026-04-08 18:26:30 - bitcoinator_trainer - INFO - Starting hyperparameter optimization (20 trials)...
+2026-04-08 18:29:37 - bitcoinator_trainer - INFO - Best RMSE: $17,028
+2026-04-08 18:29:37 - bitcoinator_trainer - INFO - Best params: {'n_estimators': 1500, 'max_depth': 10, 'learning_rate': 0.05936425419018011, 'subsample': 0.6208222269766466, 'colsample_bytree': 0.7976211961727361, 'min_child_weight': 9, 'reg_alpha': 0.2596332203660279, 'reg_lambda': 2.36509974272586e-06, 'gamma': 5.622312215119387e-06, 'scale_pos_weight': 4.520776902549077, 'tree_method': 'hist'}
+2026-04-08 18:29:37 - bitcoinator_trainer - INFO - Training xgboost model...
+2026-04-08 18:29:41 - bitcoinator_trainer - INFO - Model training completed
+2026-04-08 18:29:41 - bitcoinator_trainer - INFO - Evaluating model on test set...
+2026-04-08 18:29:41 - bitcoinator_trainer - INFO - Running backtest...
+2026-04-08 18:29:41 - bitcoinator_trainer - INFO - Model saved to models/model_best.json
+2026-04-08 18:29:41 - bitcoinator_trainer - INFO - Training completed in 3.3 minutes

@@ -1,0 +1,55 @@
+2026-04-08 18:07:02 - bitcoinator_trainer - INFO - MLflow tracking disabled
+2026-04-08 18:07:02 - bitcoinator_trainer - INFO - Training initialized for model: xgboost
+2026-04-08 18:07:02 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:07:02 - bitcoinator_trainer - INFO - BITCOINATOR TRAINING
+2026-04-08 18:07:02 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:07:02 - bitcoinator_trainer - INFO - Loading data...
+2026-04-08 18:07:05 - bitcoinator_trainer - INFO - Loaded 2278 rows of daily data
+2026-04-08 18:07:05 - bitcoinator_trainer - INFO - Creating features...
+2026-04-08 18:07:05 - bitcoinator_trainer - INFO -   - Technical indicators added
+2026-04-08 18:07:05 - bitcoinator_trainer - INFO -   - Temporal features added
+2026-04-08 18:07:05 - bitcoinator_trainer - INFO -   - Lag features (1-60) added
+2026-04-08 18:07:05 - bitcoinator_trainer - INFO -   - Rolling features added
+2026-04-08 18:07:05 - bitcoinator_trainer - INFO - Final dataset: 2189 rows, 118 columns
+2026-04-08 18:07:05 - bitcoinator_trainer - INFO - Preparing data splits...
+2026-04-08 18:07:06 - bitcoinator_trainer - INFO - Train: 1532, Val: 328, Test: 329
+2026-04-08 18:07:06 - bitcoinator_trainer - INFO - Training xgboost model...
+2026-04-08 18:07:08 - bitcoinator_trainer - INFO - Model training completed
+2026-04-08 18:07:08 - bitcoinator_trainer - INFO - Evaluating model on test set...
+2026-04-08 18:07:08 - bitcoinator_trainer - INFO - Running backtest...
+2026-04-08 18:07:08 - bitcoinator_trainer - ERROR - Training failed: 1
+Traceback (most recent call last):
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\pandas\core\indexes\base.py"[0m, line [35m3812[0m, in [35mget_loc[0m
+    return [31mself._engine.get_loc[0m[1;31m(casted_key)[0m
+           [31m~~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^[0m
+  File [35m"pandas/_libs/index.pyx"[0m, line [35m167[0m, in [35mpandas._libs.index.IndexEngine.get_loc[0m
+  File [35m"pandas/_libs/index.pyx"[0m, line [35m196[0m, in [35mpandas._libs.index.IndexEngine.get_loc[0m
+  File [35m"pandas/_libs/hashtable_class_helper.pxi"[0m, line [35m2606[0m, in [35mpandas._libs.hashtable.Int64HashTable.get_item[0m
+  File [35m"pandas/_libs/hashtable_class_helper.pxi"[0m, line [35m2630[0m, in [35mpandas._libs.hashtable.Int64HashTable.get_item[0m
+[1;35mKeyError[0m: [35m1[0m
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\train_optimized.py"[0m, line [35m586[0m, in [35mtrain[0m
+    metrics = self.evaluate_model(X_test, y_test, test_df)
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\train_optimized.py"[0m, line [35m408[0m, in [35mevaluate_model[0m
+    backtest_result = run_backtest(
+        test_df,
+        predictions,
+        self.config.backtest
+    )
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\src\backtesting\backtester.py"[0m, line [35m453[0m, in [35mrun_backtest[0m
+    return [31mbacktester.run[0m[1;31m(data, predictions)[0m
+           [31m~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\src\backtesting\backtester.py"[0m, line [35m244[0m, in [35mrun[0m
+    self.execute_signal(signal, prices[i], [31mdates[0m[1;31m[i][0m)
+                                           [31m~~~~~[0m[1;31m^^^[0m
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\pandas\core\series.py"[0m, line [35m1133[0m, in [35m__getitem__[0m
+    return [31mself._get_value[0m[1;31m(key)[0m
+           [31m~~~~~~~~~~~~~~~[0m[1;31m^^^^^[0m
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\pandas\core\series.py"[0m, line [35m1249[0m, in [35m_get_value[0m
+    loc = self.index.get_loc(label)
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\pandas\core\indexes\base.py"[0m, line [35m3819[0m, in [35mget_loc[0m
+    raise KeyError(key) from err
+[1;35mKeyError[0m: [35m1[0m

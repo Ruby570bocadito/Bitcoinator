@@ -1,0 +1,38 @@
+2026-04-08 18:05:26 - bitcoinator_trainer - INFO - MLflow tracking disabled
+2026-04-08 18:05:26 - bitcoinator_trainer - INFO - Training initialized for model: xgboost
+2026-04-08 18:05:26 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:05:26 - bitcoinator_trainer - INFO - BITCOINATOR TRAINING
+2026-04-08 18:05:26 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:05:26 - bitcoinator_trainer - INFO - Loading data...
+2026-04-08 18:05:26 - bitcoinator_trainer - ERROR - Training failed: [Errno 2] No such file or directory: 'data/raw/btcusd_1-min_data.csv'
+Traceback (most recent call last):
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\train_optimized.py"[0m, line [35m570[0m, in [35mtrain[0m
+    df = self.load_and_prepare_data()
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\train_optimized.py"[0m, line [35m135[0m, in [35mload_and_prepare_data[0m
+    df = load_data(self.config.paths.raw_data)
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\src\data\loader.py"[0m, line [35m11[0m, in [35mload_data[0m
+    df = pd.read_csv(filepath)
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py"[0m, line [35m1026[0m, in [35mread_csv[0m
+    return _read(filepath_or_buffer, kwds)
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py"[0m, line [35m620[0m, in [35m_read[0m
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py"[0m, line [35m1620[0m, in [35m__init__[0m
+    self._engine = [31mself._make_engine[0m[1;31m(f, self.engine)[0m
+                   [31m~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^[0m
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\pandas\io\parsers\readers.py"[0m, line [35m1880[0m, in [35m_make_engine[0m
+    self.handles = [31mget_handle[0m[1;31m([0m
+                   [31m~~~~~~~~~~[0m[1;31m^[0m
+        [1;31mf,[0m
+        [1;31m^^[0m
+    ...<6 lines>...
+        [1;31mstorage_options=self.options.get("storage_options", None),[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1;31m)[0m
+    [1;31m^[0m
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\pandas\io\common.py"[0m, line [35m873[0m, in [35mget_handle[0m
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+[1;35mFileNotFoundError[0m: [35m[Errno 2] No such file or directory: 'data/raw/btcusd_1-min_data.csv'[0m

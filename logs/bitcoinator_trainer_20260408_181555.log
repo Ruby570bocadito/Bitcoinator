@@ -1,0 +1,85 @@
+2026-04-08 18:15:55 - bitcoinator_trainer - INFO - MLflow tracking disabled
+2026-04-08 18:15:55 - bitcoinator_trainer - INFO - Training initialized for model: xgboost
+2026-04-08 18:15:55 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:15:55 - bitcoinator_trainer - INFO - BITCOINATOR TRAINING
+2026-04-08 18:15:55 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:15:55 - bitcoinator_trainer - INFO - Loading data...
+2026-04-08 18:15:58 - bitcoinator_trainer - INFO - Loaded 2278 rows of daily data
+2026-04-08 18:15:58 - bitcoinator_trainer - INFO - Creating features...
+2026-04-08 18:15:58 - bitcoinator_trainer - INFO -   - Technical indicators added
+2026-04-08 18:15:58 - bitcoinator_trainer - INFO -   - Temporal features added
+2026-04-08 18:15:58 - bitcoinator_trainer - INFO -   - Lag features (1-60) added
+2026-04-08 18:15:58 - bitcoinator_trainer - INFO -   - Rolling features added
+2026-04-08 18:15:58 - bitcoinator_trainer - INFO - Final dataset: 2189 rows, 118 columns
+2026-04-08 18:15:58 - bitcoinator_trainer - INFO - Preparing data splits...
+2026-04-08 18:15:59 - bitcoinator_trainer - INFO - Train: 1532, Val: 328, Test: 329
+2026-04-08 18:15:59 - bitcoinator_trainer - INFO - Starting hyperparameter optimization (50 trials)...
+2026-04-08 18:15:59 - bitcoinator_trainer - ERROR - Training failed: `low > 0` must hold for `log=True`, but got (low=0.0, high=10.0).
+Traceback (most recent call last):
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\train_optimized.py"[0m, line [35m577[0m, in [35mtrain[0m
+    best_params = self.optimize_hyperparameters(
+        X_train, y_train, X_val, y_val,
+        n_trials=n_trials
+    )
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\train_optimized.py"[0m, line [35m368[0m, in [35moptimize_hyperparameters[0m
+    best_params, study = [31moptimizer.optimize[0m[1;31m([0m
+                         [31m~~~~~~~~~~~~~~~~~~[0m[1;31m^[0m
+        [1;31mX_train, y_train, X_val, y_val,[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+        [1;31mn_trials=n_trials[0m
+        [1;31m^^^^^^^^^^^^^^^^^[0m
+    [1;31m)[0m
+    [1;31m^[0m
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\src\training\optimizer.py"[0m, line [35m337[0m, in [35moptimize[0m
+    [31mself.study.optimize[0m[1;31m([0m
+    [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^[0m
+        [1;31mobjective,[0m
+        [1;31m^^^^^^^^^^[0m
+    ...<2 lines>...
+        [1;31mshow_progress_bar=True[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1;31m)[0m
+    [1;31m^[0m
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\optuna\study\study.py"[0m, line [35m490[0m, in [35moptimize[0m
+    [31m_optimize[0m[1;31m([0m
+    [31m~~~~~~~~~[0m[1;31m^[0m
+        [1;31mstudy=self,[0m
+        [1;31m^^^^^^^^^^^[0m
+    ...<7 lines>...
+        [1;31mshow_progress_bar=show_progress_bar,[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1;31m)[0m
+    [1;31m^[0m
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\optuna\study\_optimize.py"[0m, line [35m68[0m, in [35m_optimize[0m
+    [31m_optimize_sequential[0m[1;31m([0m
+    [31m~~~~~~~~~~~~~~~~~~~~[0m[1;31m^[0m
+        [1;31mstudy,[0m
+        [1;31m^^^^^^[0m
+    ...<8 lines>...
+        [1;31mprogress_bar=progress_bar,[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1;31m)[0m
+    [1;31m^[0m
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\optuna\study\_optimize.py"[0m, line [35m165[0m, in [35m_optimize_sequential[0m
+    frozen_trial_id = _run_trial(study, func, catch)
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\optuna\study\_optimize.py"[0m, line [35m263[0m, in [35m_run_trial[0m
+    raise func_err
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\optuna\study\_optimize.py"[0m, line [35m206[0m, in [35m_run_trial[0m
+    value_or_values = func(trial)
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\src\training\optimizer.py"[0m, line [35m332[0m, in [35m<lambda>[0m
+    objective = lambda trial: [31mself._objective[0m[1;31m([0m
+                              [31m~~~~~~~~~~~~~~~[0m[1;31m^[0m
+        [1;31mtrial, X_train, y_train, X_val, y_val[0m
+        [1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1;31m)[0m
+    [1;31m^[0m
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\src\training\optimizer.py"[0m, line [35m184[0m, in [35m_objective[0m
+    params = self._suggest_xgboost_params(trial)
+  File [35m"C:\Users\Rby\Desktop\Bitcoinator\src\training\optimizer.py"[0m, line [35m103[0m, in [35m_suggest_xgboost_params[0m
+    "reg_alpha": [31mtrial.suggest_float[0m[1;31m("reg_alpha", 0.0, 10.0, log=True)[0m,
+                 [31m~~~~~~~~~~~~~~~~~~~[0m[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\optuna\trial\_trial.py"[0m, line [35m168[0m, in [35msuggest_float[0m
+    distribution = FloatDistribution(low, high, log=log, step=step)
+  File [35m"C:\Users\Rby\AppData\Roaming\Python\Python314\site-packages\optuna\distributions.py"[0m, line [35m149[0m, in [35m__init__[0m
+    raise ValueError(f"`low > 0` must hold for `log=True`, but got ({low=}, {high=}).")
+[1;35mValueError[0m: [35m`low > 0` must hold for `log=True`, but got (low=0.0, high=10.0).[0m

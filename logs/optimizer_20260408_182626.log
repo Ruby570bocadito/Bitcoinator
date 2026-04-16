@@ -1,0 +1,6 @@
+2026-04-08 18:26:30 - optimizer - WARNING - Could not use storage: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8). Using in-memory study.
+2026-04-08 18:26:30 - optimizer - INFO - Starting optimization for xgboost...
+2026-04-08 18:26:30 - optimizer - INFO - Trials: 20, Timeout: 3600s
+2026-04-08 18:29:37 - optimizer - INFO - Best RMSE: $17,028
+2026-04-08 18:29:37 - optimizer - INFO - Best params: {'n_estimators': 1500, 'max_depth': 10, 'learning_rate': 0.05936425419018011, 'subsample': 0.6208222269766466, 'colsample_bytree': 0.7976211961727361, 'min_child_weight': 9, 'reg_alpha': 0.2596332203660279, 'reg_lambda': 2.36509974272586e-06, 'gamma': 5.622312215119387e-06, 'scale_pos_weight': 4.520776902549077, 'tree_method': 'hist'}

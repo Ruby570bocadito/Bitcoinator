@@ -1,0 +1,4 @@
+2026-04-08 18:07:57 - backtester - INFO - Running backtest on 329 bars...
+2026-04-08 18:07:57 - backtester - INFO - Backtest complete. Total trades: 7
+2026-04-08 18:07:57 - backtester - INFO - Total return: -0.44%
+2026-04-08 18:07:57 - backtester - INFO - Sharpe ratio: -6.07

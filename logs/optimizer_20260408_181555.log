@@ -1,0 +1,4 @@
+2026-04-08 18:15:59 - optimizer - WARNING - Could not use storage: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8). Using in-memory study.
+2026-04-08 18:15:59 - optimizer - INFO - Starting optimization for xgboost...
+2026-04-08 18:15:59 - optimizer - INFO - Trials: 50, Timeout: 3600s

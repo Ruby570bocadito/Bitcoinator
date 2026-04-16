@@ -1,0 +1,21 @@
+2026-04-08 18:07:51 - bitcoinator_trainer - INFO - MLflow tracking disabled
+2026-04-08 18:07:51 - bitcoinator_trainer - INFO - Training initialized for model: xgboost
+2026-04-08 18:07:51 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:07:51 - bitcoinator_trainer - INFO - BITCOINATOR TRAINING
+2026-04-08 18:07:51 - bitcoinator_trainer - INFO - ============================================================
+2026-04-08 18:07:51 - bitcoinator_trainer - INFO - Loading data...
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO - Loaded 2278 rows of daily data
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO - Creating features...
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO -   - Technical indicators added
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO -   - Temporal features added
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO -   - Lag features (1-60) added
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO -   - Rolling features added
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO - Final dataset: 2189 rows, 118 columns
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO - Preparing data splits...
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO - Train: 1532, Val: 328, Test: 329
+2026-04-08 18:07:55 - bitcoinator_trainer - INFO - Training xgboost model...
+2026-04-08 18:07:57 - bitcoinator_trainer - INFO - Model training completed
+2026-04-08 18:07:57 - bitcoinator_trainer - INFO - Evaluating model on test set...
+2026-04-08 18:07:57 - bitcoinator_trainer - INFO - Running backtest...
+2026-04-08 18:07:57 - bitcoinator_trainer - INFO - Model saved to models/model_best.json
+2026-04-08 18:07:57 - bitcoinator_trainer - INFO - Training completed in 0.1 minutes

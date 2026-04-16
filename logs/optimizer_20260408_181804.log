@@ -1,0 +1,26 @@
+2026-04-08 18:18:09 - optimizer - WARNING - Could not use storage: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8). Using in-memory study.
+2026-04-08 18:18:09 - optimizer - INFO - Starting optimization for xgboost...
+2026-04-08 18:18:09 - optimizer - INFO - Trials: 20, Timeout: 3600s
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - WARNING - Trial failed: XGBModel.fit() got an unexpected keyword argument 'early_stopping_rounds'
+2026-04-08 18:18:09 - optimizer - INFO - Best RMSE: $inf
+2026-04-08 18:18:09 - optimizer - INFO - Best params: {'n_estimators': 1000, 'max_depth': 11, 'learning_rate': 0.01884415849333173, 'subsample': 0.5390749631275717, 'colsample_bytree': 0.8996376083134935, 'min_child_weight': 6, 'reg_alpha': 1.4219747061515006e-05, 'reg_lambda': 2.7693363796877324, 'gamma': 3.1842236151882537e-06, 'scale_pos_weight': 3.4236299547004134, 'tree_method': 'hist'}
